@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <h1 v-if="showTitle == true" @click="dessine()">{{ Tile }}</h1>
     <canvas
       name="gametile"
@@ -7,7 +7,7 @@
       :width="size"
       :height="size"
       style="border: 1px solid grey"
-      class="w-40"
+      class="w-40 bg-red-400"
     ></canvas>
   </div>
 </template>
@@ -35,7 +35,7 @@ const dessine = () => {
   if (myCanvas.value) {
     const ctx = myCanvas.value.getContext("2d");
 
-    const imageUrl = "carte.png";
+    const imageUrl = "carte2.png";
 
     const img = new Image();
     img.src = imageUrl;
@@ -68,7 +68,7 @@ const dessine = () => {
             // ctx.drawImage(img, 15, 710, 270, 235, 0, 0, iconSize(), iconSize());
             break;
           case tileNameEnum.Harbor.toString():
-            // ctx.drawImage(img, 280, 5, 270, 235, 0, 0, iconSize(), iconSize());
+            ctx.drawImage(img, 12, 1657, 360, 315, 0, 0, iconSize(), iconSize());
             break;
           case tileNameEnum.RedHearts.toString():
             ctx.drawImage(img, 290, 710, 270, 235, 0, 0, iconSize(), iconSize());
@@ -86,13 +86,13 @@ const dessine = () => {
             ctx.drawImage(img, 610, 975, 345, 345, 0, 0, iconSize(), iconSize());
             break;
           case tileNameEnum.ConstructionSite.toString():
-            // ctx.drawImage(img, 280, 5, 270, 235, 0, 0, iconSize(), iconSize());
+            ctx.drawImage(img, 6, 1265, 335, 305, 0, 0, iconSize(), iconSize());
             break;
-          case tileNameEnum.BalloonLauch.toString():
-            // ctx.drawImage(img, 280, 5, 270, 235, 0, 0, iconSize(), iconSize());
+          case tileNameEnum.BalloonLaunch.toString():
+            ctx.drawImage(img, 600, 1330, 356, 310, 0, 0, iconSize(), iconSize());
             break;
           case tileNameEnum.GoldenHearts.toString():
-            // ctx.drawImage(img, 280, 5, 270, 235, 0, 0, iconSize(), iconSize());
+            ctx.drawImage(img, 1018, 394, 80, 80, 0, 0, iconSize(), iconSize());
             break;
           case tileNameEnum.Cloud.toString():
             ctx.drawImage(img, 320, 945, 300, 300, 0, 0, iconSize(), iconSize());

@@ -114,16 +114,19 @@
       >
 
       <unlock v-model="score.Chantier"
-        >Chantier de Construction (territoire de 7+=7)</unlock
-      >
+        >
+        <cardhelp @click="showCard(TileE.ConstructionSite)">Chantier de Construction (territoire de 7+=7)</cardhelp>
+      </unlock>
 
-      <unlock v-model="score.Decollage">Site de décollage (2/tuile parcourue)</unlock>
+      <unlock v-model="score.Decollage">
+      <cardhelp @click="showCard(TileE.BalloonLaunch)">Site de décollage (2/tuile parcourue)</cardhelp>
+      </unlock>
 
-      <unlock v-model="score.GoldHearts">Coeur doré (2/bords correspondant)</unlock>
+      <unlock v-model="score.GoldHearts"><cardhelp @click="showCard(TileE.GoldenHearts)">Coeur doré (2/bords correspondant)</cardhelp></unlock>
 
-      <unlock v-model="score.Gare">Gare ferroviare (si fermée = 1/tuile)</unlock>
+      <unlock v-model="score.Gare"><cardhelp @click="showCard(TileE.TrainStation)">Gare ferroviaire (si fermée = 1/tuile)</cardhelp></unlock>
 
-      <unlock v-model="score.Port">Port de plaisance (si fermé = 1/tuile)</unlock>
+      <unlock v-model="score.Port"><cardhelp @click="showCard(TileE.Harbor)">Port de plaisance (si fermé = 1/tuile)</cardhelp></unlock>
 
       <unlock v-model="score.Cloud" noscore
         ><cardhelp @click="showCard(TileE.Cloud)">Nuage</cardhelp></unlock
